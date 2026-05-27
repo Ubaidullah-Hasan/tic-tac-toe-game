@@ -28,6 +28,7 @@ export default function Board({isXNext, squares, onPlay}) {
 
     // square is empty then
     const nextSquares = squares.slice();
+    console.log({nextSquares})
     if (isXNext) {
       nextSquares[i] = "X";
     } else {

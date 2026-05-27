@@ -4,7 +4,6 @@ import Board from "./Board";
 export default function Game() {
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [isXNext, setIsXNext] = useState(true);
-  console.log(history);
   const [currentMove, setCurrentMove] = useState(0);
 
   const currentSquare = history[currentMove];
@@ -12,6 +11,8 @@ export default function Game() {
   function handlePlay(nextSquares) {
     setIsXNext(!isXNext);
     const nextHistory = [...history.slice(0, currentMove+1), nextSquares]
+    console.log({history});
+    console.log({nextHistory});
     setHistory(nextHistory);
     setCurrentMove(nextHistory.length - 1);
   }
