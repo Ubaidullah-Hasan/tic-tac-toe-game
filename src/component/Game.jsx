@@ -37,11 +37,11 @@ export default function Game() {
   });
 
   return (
-    <div>
+    <div className="flex justify-center gap-x-14 mt-5">
       <div>
         <Board isXNext={isXNext} squares={currentSquare} onPlay={handlePlay} />
       </div>
-      <div>
+      <div className="border border-gray-900 rounded bg-amber-200 p-5">
         <ol>{moves}</ol>
       </div>
     </div>
